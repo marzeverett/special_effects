@@ -1,8 +1,9 @@
 
+#Make sure you start mosquitto by typing "mosquitto!" - in your terminal. 
+
 import node_classes as nc
 import myself
 import topic_action_mapping as tam
-
 import json
 
 connection_info = {
@@ -12,12 +13,6 @@ connection_info = {
      "mqtt_port": 1883
 
 }
-
-
-# message = {"Hola": "Como estas?"}
-# commander = nc.command_node("commander", connection_info)
-# commander.publish("Hola", json.dumps(message))
-# commander.disconnect()
 
 #External libraries - from SkyWeather2 System primarily 
 #Background Scheduler stuff 
@@ -40,15 +35,30 @@ def ap_my_listener(event):
             #Probably better to alert another watchdog. 
             #os.execv(sys.executable, ['python3'] + [sys.argv[0]])
 
-
+#Get your own instance
 me = myself.myself["name"]
 
 if me == "commander": 
     message = {"Hola": "Como estas?"}
     #commander = nc.command_node("commander", connection_info)
     commander = nc.create_commander(me, connection_info)
-    commander.publish("Hola", json.dumps(message))
-    commander.disconnect()
+
+    #Listen for triggers and choose based on them. Probably going to be pyserial. 
+
+    #Might also pass commander in as an argument, depending. 
+    if "mode" in list(myself.myself.keys()):
+        mode  = myself.myself["mode"]
+        if mode == "harry_potter":
+            import harry_potter
+            harry_potter.harry_potter(commander)
+
+    #commander.publish("Hola", json.dumps(message))
+    #commander.publish("Hello", json.dumps(message))
+    #commander.disconnect()
+
+    # Main Loop
+        #while True:
+            #time.sleep(1.0)
 
 else:
     try: 
@@ -68,14 +78,16 @@ else:
         scheduler.print_jobs()
         print ("-----------------")
 
+        # Main Loop
+        while True:
+            time.sleep(1.0)
+
     except Exception as e:
         print(e)
         print("Could not instantiate node for: ", me)
     
 
-# Main Loop
-while True:
-    time.sleep(1.0)
+    
 
 
 
