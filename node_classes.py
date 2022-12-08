@@ -3,6 +3,9 @@
 import paho.mqtt.client as paho
 from paho import mqtt
 import time
+import myself
+import topic_action_mapping as tam
+import importlib 
 
 #connection info - dictionary with fields:
 #"mqtt_username", "mqtt_password", "mqtt_url", "mqtt_port"
@@ -15,6 +18,8 @@ def action_handler(client, userdata, message):
     #Use some kind of configuration to figure out what should go where to route messages and stuff. 
     topic_list = message.topic.split('/')
     print(topic_list)
+    action_lib = userdata["action"]
+    action_lib.action(message)
 
 
 class command_node:
@@ -44,7 +49,11 @@ class command_node:
 
 class subscriber_node:
     def __init__(self, client_id, connection_info, topic, callback_function=None):
-        user_data = {"topic": topic}
+        self.me = myself.myself["name"]
+
+        lib_name = tam.mapping[self.me][topic]
+        action = importlib.import_module(lib_name, package=None)
+        user_data = {"topic": topic, "library": action}
         #self.client = paho.Client(client_id=client_id, protocol=paho.MQTTv5, userdata=user_data)
         self.client = paho.Client(client_id=client_id, userdata=user_data)
 

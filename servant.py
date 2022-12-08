@@ -10,7 +10,7 @@ connection_info = {
 
 }
 
-servant = nc.subscriber_node("servant", connection_info, "Hola")
+servant = nc.subscriber_node("servant_1", connection_info, "Hola")
 servant.disconnect()
 
 
