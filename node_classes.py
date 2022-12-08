@@ -18,7 +18,7 @@ def action_handler(client, userdata, message):
     #Use some kind of configuration to figure out what should go where to route messages and stuff. 
     topic_list = message.topic.split('/')
     print(topic_list)
-    action_lib = userdata["action"]
+    action_lib = userdata["library"]
     action_lib.action(message)
 
 
