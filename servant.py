@@ -12,7 +12,7 @@ connection_info = {
 
 
 message = {"Hola": "Como estas?"}
-servant = nc.servant("servant", connection_info, "Hola")
+servant = nc.subscriber_node("servant", connection_info, "Hola")
 servant.disconnect()
 
 
