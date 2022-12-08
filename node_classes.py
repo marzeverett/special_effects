@@ -81,3 +81,11 @@ class subscriber_node:
     def disconnect(self):
         self.client.loop_stop()
         self.client.disconnect()
+
+
+def create_commander(client_id, connection_info):
+    commander = command_node(client_id, connection_info)
+    return commander
+
+def create_servant(client_id, connection_info, topic, callback_function=None):
+    subscriber_node(client_id, connection_info, topic, callback_function=callback_function)
