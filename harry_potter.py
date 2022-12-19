@@ -19,12 +19,12 @@ def trigger(commander, message_list, trigger_num, message):
 
 def harry_potter(commander):
     #First, create the list of actions for the show\
-    message_list = ["Hello", "Hola"]
+    message_list = ["Hello", "Hola", "erratic_flowers"]
     #Then, as triggers happen, send the correct message. 
     trigger_num = 0
     #This will be replaced by the pyserial wait 
     while trigger_num < len(message_list):
-        #Could also check the trigger here? 
+        #Could also check the trigger here? e
         trigger(commander, message_list, trigger_num, "hi!")
         trigger_num += 1
         time.sleep(delay_between_triggers)
