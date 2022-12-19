@@ -8,6 +8,7 @@ mapping = {
         "knock_over": "knock_over"
     },
     "servant_2": {
-        "clock": "clock"
+        "clock": "clock",
+        "music_box": "music_box"
     }
 }
