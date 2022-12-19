@@ -4,6 +4,7 @@ mapping = {
         "Hello": "other_action",
         "erratic_flowers": "erratic_flowers",
         "shaking_box": "shaking_box",
-        "lantern": "lantern"
+        "lantern": "lantern",
+        "knock_over": "knock_over"
     }
 }
