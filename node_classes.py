@@ -19,7 +19,7 @@ def action_handler(client, userdata, message):
     topic_list = message.topic.split('/')
     print(topic_list)
     action_lib = userdata["library"]
-    print(string(action_lib))
+    print(str(action_lib))
     action_lib.action(message)
 
 
