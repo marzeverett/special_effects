@@ -12,9 +12,9 @@ pwm = PCA9685(0x40)
 pwm.setPWMFreq(50)
 
 for i in range(0, 6):
-	pwm.setServoPulse(index,2500)
+	pwm.setServoPulse(index,500)
 	time.sleep(0.2)
-	pwm.setServoPulse(index,100)
+	pwm.setServoPulse(index,2300)
 	time.sleep(0.2)
 #pwm.setServoPulse(1,Pos1)
 #pwm.setServoPulse(2,Pos2)
