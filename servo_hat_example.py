@@ -12,9 +12,9 @@ pwm.setPWMFreq(50)
 
 for i in range(0, 4):
 	pwm.setServoPulse(0,2100)
-	time.sleep(1)
+	time.sleep(0.2)
 	pwm.setServoPulse(0,500)
-	time.sleep(1)
+	time.sleep(0.2)
 #pwm.setServoPulse(1,Pos1)
 #pwm.setServoPulse(2,Pos2)
 #pwm.setServoPulse(3,Pos3)
