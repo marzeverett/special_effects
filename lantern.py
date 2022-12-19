@@ -9,6 +9,8 @@ def write_read(x):
     return data
 
 def action(message):
+    arduino = serial.Serial(port='/dev/ttyUSB0', baudrate=9600, timeout=.1)
+
     print("Before serial send")
     arduino = serial.Serial(port='/dev/ttyUSB0', baudrate=9600, timeout=.1)
     print("After serial send")
