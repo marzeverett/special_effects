@@ -29,7 +29,7 @@ def action(message):
                 time.sleep(0.001)
     GPIO.cleanup()
 
-action()
+action("hi")
 
 
 
