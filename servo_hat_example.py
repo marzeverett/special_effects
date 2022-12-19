@@ -20,11 +20,12 @@ Step2 = 0
 Step3 = 0  
 pwm.setServoPulse(0,Pos0)
 time.sleep(5)
-pwm.setServoPulse(0,Pos1)
+pwm.setServoPulse(1,Pos2)
+time.sleep(5)
 #pwm.setServoPulse(1,Pos1)
 #pwm.setServoPulse(2,Pos2)
 #pwm.setServoPulse(3,Pos3)
 
-time.sleep(5)
+#time.sleep(5)
 
 	
