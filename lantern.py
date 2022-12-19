@@ -13,7 +13,7 @@ def write_read(x):
 def action(message):
     print("Before serial send")
     print("After serial send")
-    num = 8
+    num = str(8)
     value = write_read(num)
     print(value) # printing the value
 
