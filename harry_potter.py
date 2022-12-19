@@ -21,7 +21,8 @@ def harry_potter(commander):
     #First, create the list of actions for the show\
     #message_list = ["Hello", "Hola", "erratic_flowers"]
     message_list = ["erratic_flowers", "shaking_box", "lantern"]
-    message_list = ["knock_over"]
+    #message_list = ["knock_over"]
+    message_list = ["clock"]
 
     #Then, as triggers happen, send the correct message. 
     trigger_num = 0

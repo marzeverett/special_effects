@@ -6,5 +6,8 @@ mapping = {
         "shaking_box": "shaking_box",
         "lantern": "lantern",
         "knock_over": "knock_over"
+    },
+    "servant_2": {
+        "clock": "clock"
     }
 }
