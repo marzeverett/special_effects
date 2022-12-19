@@ -5,8 +5,8 @@ import time
 import RPi.GPIO as GPIO
 from RpiMotorLib import RpiMotorLib
 
-clock_pins = [17, 18, 27, 22]
-clock_pins = [7, 11, 13, 15]
+#clock_pins = [17, 18, 27, 22]
+clock_pins = [7, 11, 15, 13]
 clock_motor = RpiMotorLib.BYJMotor("StepperMotor", "28BYJ")
 
 
