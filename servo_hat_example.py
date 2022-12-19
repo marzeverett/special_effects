@@ -7,13 +7,14 @@ import socket
 
 print("start")
 
+index = 5
 pwm = PCA9685(0x40)
 pwm.setPWMFreq(50)
 
 for i in range(0, 6):
-	pwm.setServoPulse(0,2100)
+	pwm.setServoPulse(index,2100)
 	time.sleep(0.2)
-	pwm.setServoPulse(0,500)
+	pwm.setServoPulse(index,500)
 	time.sleep(0.2)
 #pwm.setServoPulse(1,Pos1)
 #pwm.setServoPulse(2,Pos2)
