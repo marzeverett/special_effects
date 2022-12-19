@@ -19,6 +19,7 @@ def action_handler(client, userdata, message):
     topic_list = message.topic.split('/')
     print(topic_list)
     action_lib = userdata["library"]
+    print(string(action_lib))
     action_lib.action(message)
 
 
@@ -52,8 +53,10 @@ class subscriber_node:
         self.me = myself.myself["name"]
 
         lib_name = tam.mapping[self.me][topic]
+        print(lib_name)
         action = importlib.import_module(lib_name, package=None)
         user_data = {"topic": topic, "library": action}
+        print(user_data)
         #self.client = paho.Client(client_id=client_id, protocol=paho.MQTTv5, userdata=user_data)
         self.client = paho.Client(client_id=client_id, userdata=user_data)
 
