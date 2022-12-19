@@ -19,7 +19,9 @@ def trigger(commander, message_list, trigger_num, message):
 
 def harry_potter(commander):
     #First, create the list of actions for the show\
-    message_list = ["Hello", "Hola", "erratic_flowers"]
+    #message_list = ["Hello", "Hola", "erratic_flowers"]
+    message_list = ["erratic_flowers", "shaking_box", "lantern"]
+
     #Then, as triggers happen, send the correct message. 
     trigger_num = 0
     #This will be replaced by the pyserial wait 
