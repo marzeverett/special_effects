@@ -7,7 +7,7 @@ import socket
 
 print("start")
 
-index = 5
+index = 4
 pwm = PCA9685(0x40)
 pwm.setPWMFreq(50)
 
