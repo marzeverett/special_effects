@@ -12,11 +12,11 @@ def action(message):
     pwm = PCA9685(0x40)
     pwm.setPWMFreq(50)
 
-    pwm.setServoPulse(4,500)
+    pwm.setServoPulse(8,500)
     time.sleep(0.2)
-    pwm.setServoPulse(4,2200)
+    pwm.setServoPulse(8,2200)
     time.sleep(0.2)
-    pwm.setServoPulse(4,500)
+    pwm.setServoPulse(8,500)
     time.sleep(0.2)
 
 
