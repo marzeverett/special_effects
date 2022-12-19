@@ -11,7 +11,7 @@ pwm = PCA9685(0x40)
 pwm.setPWMFreq(50)
 
 Pos0 = 1500  
-Pos1 = 1500 
+Pos1 = 50 
 Pos2 = 1500 
 Pos3 = 1500 
 Step0 = 0  
