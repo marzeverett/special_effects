@@ -9,7 +9,7 @@ import json
 connection_info = {
     #"mqtt_username":,
      #"mqtt_password":, 
-     "mqtt_url": "192.168.0.28", 
+     "mqtt_url": "192.168.1.150", 
      "mqtt_port": 1883
 
 }
