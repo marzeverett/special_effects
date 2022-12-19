@@ -5,7 +5,7 @@ import time
 
 def action(message):
     GPIO.setmode(GPIO.BOARD)
-    control_pins = [7,11,15,13]
+    control_pins = [29,31,33,35]
     for pin in control_pins:
             GPIO.setup(pin, GPIO.OUT)
             GPIO.output(pin, 0)
