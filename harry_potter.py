@@ -23,7 +23,7 @@ def harry_potter(commander):
     #message_list = ["erratic_flowers", "shaking_box", "lantern"]
     #message_list = ["knock_over"]
     #message_list = ["clock"]
-    message_list = ["music_box"]
+    message_list = ["music_box", "clock"]
 
     #Then, as triggers happen, send the correct message. 
     trigger_num = 0
