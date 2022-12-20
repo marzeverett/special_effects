@@ -108,3 +108,8 @@ while(keep_going):
 
             time.sleep(1.5)
 
+#sudo cp special_effect.service /lib/systemd/system/special_effect.service
+#sudo systemctl daemon-reload
+#sudo systemctl enable special_effect.service
+#sudo systemctl start special_effect.service
+#sudo systemctl status special_effect.service
