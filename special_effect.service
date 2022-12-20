@@ -1,0 +1,12 @@
+[Unit]
+Description=Local Blynk Server Service
+After=multi-user.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/special_effects
+ExecStart=/usr/bin/python3 home/pi/special_effects/special_effect.py
+User=pi
+
+[Install]
+WantedBy=multi-user.target
