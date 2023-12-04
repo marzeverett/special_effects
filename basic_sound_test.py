@@ -20,13 +20,12 @@ commander = nc.create_commander(myself.myself["name"], connection_info)
 mode = "new"
 #mode = "old"
 
+#If you give it an argument, it will do the old wand version. Otherwise, the new wand version. 
 if len(sys.argv) <= 1:
     mode = "new"
 else:
     mode = sys.argv[1]
 
-com_port = '/dev/ttyUSB0'
-arduino = serial.Serial(port=com_port, baudrate=9600, timeout=0.1)
 pygame.mixer.init()
 pygame.mixer.music.load('sounds/thunder.mp3')
 sleep_time = 1.5
@@ -68,9 +67,10 @@ keep_going = True
 
 while(keep_going):
       #Read in a message
-      data = arduino.readline()
+      input_key = input("Press a key to advance\n")
+      print(input_key)
+      message = "FAST BACK"
       #print(data)
-      message = data.decode()
       if len(message) > 1:
         print(message)
         print(type(message))
