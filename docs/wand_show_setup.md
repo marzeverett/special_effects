@@ -33,6 +33,14 @@ Example:
 
 - Highly recommend installing tailscale so you can remote into the pis when they are headless. Will make your life better. 
 
+## Raspberry Pi Pinout
+From here: https://www.raspberrypi.com/documentation/computers/images/GPIO-Pinout-Diagram-2.png?hash=df7d7847c57a1ca6d5b2617695de6d46
+![Raspberry Pi Pinout](https://www.raspberrypi.com/documentation/computers/images/GPIO-Pinout-Diagram-2.png?hash=df7d7847c57a1ca6d5b2617695de6d46)
+
+## Arduino Nano Pinout
+From here: https://lastminuteengineers.com/wp-content/uploads/arduino/Arduino-Nano-Pinout.png
+![Arduino Nano Pinout](https://lastminuteengineers.com/wp-content/uploads/arduino/Arduino-Nano-Pinout.png)
+
 ## servant_1.py 
 
 myself.py
@@ -144,6 +152,7 @@ GPIO - Board Mode
 
 ### Walking Through the Actual Code 
 Need pygame installed to play sounds 
+
 [Please see wand_show.py](../wand_show.py)
 
 ### Running Commands 
@@ -163,3 +172,4 @@ TODO
 - Fan effect
 - SD Card Image 
 - Tailscale
+
