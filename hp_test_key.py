@@ -23,17 +23,15 @@ mode = "new"
 if len(sys.argv) <= 1:
     mode = "new"
 else:
-    mode = sys.argv[1]
+    mode = "old"
 
-com_port = '/dev/ttyUSB0'
-arduino = serial.Serial(port=com_port, baudrate=9600, timeout=0.1)
+print(mode)
+
 pygame.mixer.init()
 pygame.mixer.music.load('sounds/thunder.mp3')
 sleep_time = 1.5
 
-#group_1_actions = ["clock", "erratic_flowers", "shaking_box", "knock_over"]
-group_1_actions = ["clock", "erratic_flowers", "knock_over"]
-
+group_1_actions = ["clock", "erratic_flowers", "shaking_box", "knock_over"]
 group_2_actions = ["thunder", "glass"]
 new_finish_action = "lantern"
 
@@ -51,7 +49,7 @@ def play_sound(what_sound):
 #New wand buyer
 if mode == "new":
     #First, get all the actions we will take here. 
-    num_group_1_actions = random.randrange(2, len(group_1_actions))
+    num_group_1_actions = random.randrange(2, len(group_1_actions)-1)
     num_group_2_actions = random.randrange(1, len(group_2_actions)+1)
     group_1_actions  = random.sample(group_1_actions, num_group_1_actions)
     group_2_actions  = random.sample(group_2_actions, num_group_2_actions)
@@ -70,14 +68,14 @@ keep_going = True
 
 while(keep_going):
       #Read in a message
-      data = arduino.readline()
+      data = input()
       #print(data)
-      message = data.decode()
-      if len(message) > 1:
+      message = data
+      if len(message) >= 1:
         print(message)
         print(type(message))
         #if "FAST BACK" in message:
-        if len(message) > 2 and len(message) < 20:
+        if len(message) > 0 and len(message) < 20:
             if whole_list != []:
                 item = whole_list.pop()
                 message = {"message": item}
