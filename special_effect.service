@@ -1,5 +1,5 @@
 [Unit]
-Description=Local Blynk Server Service
+Description=Special Effect Service 
 After=multi-user.target
 
 [Service]
