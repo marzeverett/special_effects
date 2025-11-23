@@ -41,8 +41,8 @@ pygame.mixer.music.load('sounds/thunder.mp3')
 sleep_time = 1.5
 
 #These are the motion actions
-#group_1_actions = ["clock", "erratic_flowers", "shaking_box", "knock_over"]
-group_1_actions = ["clock", "erratic_flowers", "knock_over"]
+group_1_actions = ["clock", "erratic_flowers", "shaking_box", "knock_over"]
+#group_1_actions = ["clock", "erratic_flowers", "knock_over"]
 #These are the sound actions
 group_2_actions = ["thunder", "glass"]
 #This is the finish action 
